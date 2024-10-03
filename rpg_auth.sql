@@ -1,11 +1,11 @@
--- Create the rpg_auth database
-CREATE DATABASE rpg_auth;
+-- Create the rpg_auth database (if you haven't created it yet)
+CREATE DATABASE IF NOT EXISTS rpg_auth;
 
 -- Use the rpg_auth database
 USE rpg_auth;
 
--- Create the rpg_auth table
-CREATE TABLE rpg_auth (
+-- Create the accounts table
+CREATE TABLE IF NOT EXISTS accounts (
     acc_id INT AUTO_INCREMENT PRIMARY KEY,
     acc_name VARCHAR(80) NOT NULL,
     acc_password_hash VARCHAR(128) NOT NULL,
